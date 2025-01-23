@@ -19,12 +19,13 @@ boxplot(t(MR2SW),names=vd,xlab="d",
         ylim=c(0.9,1),cex=2,
         cex.axis=2.4,cex.lab=2.4)
 dev.off()
-
-for (k in 1:5) { #Loop on variable k for which the effect is studied
-  pdf(file=paste0("ecological_simulated_influence_",k,".pdf"))
+#
+#Study of the effect of the variables
+for (imc in 1:5) { #Loop on the first Monte Carlo repetitions
+  pdf(file=paste0("ecological_simulated_influence_",imc,".pdf"))
   par(mar = c(5,5,5,5))
-  #Boxplot of prediction difference as a function of k
-  boxplot(t(ThatYtest_2_Plus[k,,] - ThatYtest_2_Minus[k,,]),xlab="k",ylab= "Prediction difference",ylim=c(-0.4,0.4),
+  #Boxplot of prediction difference as a function of index of studied variable
+  boxplot(t(ThatYtest_2_Plus[imc,,] - ThatYtest_2_Minus[imc,,]),xlab="k",ylab= "Prediction difference",ylim=c(-0.4,0.4),
           cex=2,cex.axis=2.4,cex.lab=2.4)
   dev.off()
 }
