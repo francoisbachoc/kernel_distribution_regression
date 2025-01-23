@@ -80,7 +80,7 @@ SelCV = function(vlc,vlambda,Mdist,nCV,nTrainCV,Ytrain) {
         YtrainCV = Ytrain[perm[1:nTrainCV]] #subvector of training predictands
         YtestCV = Ytrain[perm[(nTrainCV+1):n]] #subvector of test predictands
         hatYCV =  hatY(lc,lambda,MdistTrain,MdistTrainTest,YtrainCV) #kernel regression prediction  
-        SMSE = SMSE + sum((YtestCV-hatYCV)^2)  #sum of square error computation
+        SMSE = SMSE + sum((YtestCV-hatYCV)^2)  #sum of squared errors computation
       }
       MMSE[ilc,ilambda] = SMSE
     }
