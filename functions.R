@@ -11,13 +11,13 @@ MdistSW = function(X1,X2,Mproj) {
   nproj = dim(Mproj)[1]
   TprojSort1 = array(dim=c(n1,N,nproj))
   for (i in 1:n1) {
-    mi = Mproj %*% t(X1[i,,]) #projection on a random direction
+    mi = Mproj %*% t(X1[i,,]) #projection on the random directions
     mis = apply(mi,1,sort) #sort of the N projected values
     TprojSort1[i,,] = mis
   }
   TprojSort2 = array(dim=c(n2,N,nproj))
   for (j in 1:n2) {
-    mj = Mproj %*% t(X2[j,,]) #projection on a random direction
+    mj = Mproj %*% t(X2[j,,]) #projection on the random directions
     mjs = apply(mj,1,sort) #sort of the N projected values
     TprojSort2[j,,] = mjs
   }
