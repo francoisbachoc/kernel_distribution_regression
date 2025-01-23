@@ -220,7 +220,7 @@ runRegression_SW = function(nproj,nCV,nTrainCV,vd,nHypCV) {
     #Compute n times ntest matrix of sliced Wasserstein distances between training and test data:
     MdistTrainTest = MdistSW(Xtrain,Xtest,Mproj)
     #Note that the corresponding training matrix has already be computed above
-    #Sliced Wasserstein regressio:
+    #Sliced Wasserstein regression:
     MhatYtest_2_Minus[k,] = hatY(lc,lambda,MdistTrain,MdistTrainTest,Ytrain)
     #Note that the corresponding optimal parameters ell and lambda have already been computed above
     MYtest_2_Minus[k,] = Ytest
