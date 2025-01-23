@@ -60,7 +60,7 @@ SelCV = function(vlc,vlambda,Mdist,nCV,nTrainCV,Ytrain) {
   #Select scaling parameter lc among a vector vlc
   #and regularization parameter lambda among a vector vlambda
   #for the matrix Mdist of Hilbertian distances for the training data
-  #Selection is done by minimizing the sum of square error with cross validation
+  #Selection is done by minimizing the sum of squared errors with cross validation
   #with nCV splits between a training subsample of size nTrainCV 
   #and a test subsample with the remaining data
   #The scalar predictands are in the vector Ytrain
