@@ -143,7 +143,7 @@ generateData = function(d,dmax,n,ntest,N,alphainf,alphasup,betabar1,
   #impact of variable k
   #Hence we need an array with 4 entries k,i,j,l where l is the component of X_ij
   XmodPlus = array(dim=c(d,n,N,d)) #Plus: larger values of X_ijk
-  XmodMinus = array(dim=c(d,n,N,d)) #Minus: larger values of X_ijk
+  XmodMinus = array(dim=c(d,n,N,d)) #Minus: smaller values of X_ijk
   YmodPlus = matrix(nrow=d,ncol=n)
   YmodMinus = matrix(nrow=d,ncol=n)
   for (k in 1:d) { #Loop on index of studied variable for impact
