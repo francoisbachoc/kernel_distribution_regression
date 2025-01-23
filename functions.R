@@ -97,7 +97,7 @@ generateData = function(d,dmax,n,ntest,N,alphainf,alphasup,betabar1,
                         betabar2,multScore) {
   #Generate data (X_ij,Y_i) that are saved in file Data as .rda files
   #d, dmax: smallest and largest ambient dimension
-  #n, ntest:number of training and test observations Y_i
+  #n, ntest: number of training and test observations Y_i
   #N: number of samples per Y_i
   #alphainf, alphasup: bounds for the distribution of dependence parameter alpha
   #betabar1, betabar2: bounds for the distributions of mean parameters beta1 and beta2
