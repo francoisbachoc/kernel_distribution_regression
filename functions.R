@@ -65,7 +65,7 @@ SelCV = function(vlc,vlambda,Mdist,nCV,nTrainCV,Ytrain) {
   #and a test subsample with the remaining data
   #The scalar predictands are in the vector Ytrain
   #Returns a list with the optimal lc and lambda and the 
-  #matrix of sum of square errors
+  #matrix of sum of squared errors
   n = dim(Mdist)[1]
   MMSE = matrix(nrow = length(vlc),ncol = length(vlambda))
   for (ilc in 1:length(vlc)) {    #double loop on lc and lambda
